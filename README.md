@@ -1,7 +1,7 @@
 # gitlab
 gitlab self host install
 
-## CLI 
+## CLI must know
 ```bash
 #Initial root password file, for at least 24 hours. For security reasons, after 24 hours, this file is automatically removed by the first gitlab-ctl reconfigure .
 $cat /etc/gitlab/initial_root_password

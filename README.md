@@ -35,6 +35,7 @@ letsencrypt['enable'] = true
 
 
 ## About Service in gitlab  
+```bash
 $sudo gitlab-ctl status  
 run: alertmanager:  
 run: crond:  
@@ -53,4 +54,4 @@ run: redis:
 run: redis-exporter:  
 run: registry:   
 run: sidekiq:
-  
+```  

@@ -34,6 +34,7 @@ letsencrypt['enable'] = true
 ```
 
 ## Connect Mail Server 
+```
 $ sudo vim /etc/gitlab/gitlab.rb
 
 ###! Docs: https://docs.gitlab.com/omnibus/settings/smtp.html
@@ -71,7 +72,7 @@ $ sudo vim /etc/gitlab/gitlab.rb
 # gitlab_rails['gitlab_email_smime_key_file'] = '/etc/gitlab/ssl/gitlab_smime.key'
 # gitlab_rails['gitlab_email_smime_cert_file'] = '/etc/gitlab/ssl/gitlab_smime.crt'
 # gitlab_rails['gitlab_email_smime_ca_certs_file'] = '/etc/gitlab/ssl/gitlab_smime_cas.crt
-
+```
 
 
 ## About Service in gitlab  

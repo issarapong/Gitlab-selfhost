@@ -36,22 +36,22 @@ letsencrypt['enable'] = true
 
 ## About Service in gitlab  
 ```bash
-$sudo gitlab-ctl status  
-run: alertmanager:  
-run: crond:  
-run: gitaly:  
-run: gitlab-exporter:  
-run: gitlab-kas:  
-run: gitlab-workhorse:  
-run: logrotate:  
-run: nginx:  
-run: node-exporter:  
-run: postgres-exporter:  
-run: postgresql:  
+$sudo gitlab-ctl status
+run: alertmanager:
+run: crond:
+run: gitaly: 
+run: gitlab-exporter:
+run: gitlab-kas:
+run: gitlab-workhorse:
+run: logrotate:
+run: nginx:
+run: node-exporter:
+run: postgres-exporter: 
+run: postgresql:
 run: prometheus:  
-run: puma:  
-run: redis:  
-run: redis-exporter:  
-run: registry:   
+run: puma:
+run: redis: 
+run: redis-exporter:
+run: registry:
 run: sidekiq:
 ```  

@@ -11,7 +11,8 @@ $/etc/gitlab/gitlab.rb
 $sudo gitlab-ctl reconfigure
 # Check Logs
 $sudo gitlab-ctl tail
-#
+#Check all Service of gitlab 
+sudo gitlab-ctl status
 ```
 
 ## letsencrypts Enable
@@ -31,3 +32,24 @@ letsencrypt['enable'] = true
 # letsencrypt['auto_renew_log_directory'] = '/var/log/gitlab/lets-encrypt'
 # letsencrypt['alt_names'] = []
 ```
+
+
+## About Service in gitlab
+$sudo gitlab-ctl status
+run: alertmanager:
+run: crond:
+run: gitaly:
+run: gitlab-exporter:
+run: gitlab-kas:
+run: gitlab-workhorse:
+run: logrotate:
+run: nginx:
+run: node-exporter:
+run: postgres-exporter:
+run: postgresql:
+run: prometheus:
+run: puma:
+run: redis:
+run: redis-exporter:
+run: registry: 
+run: sidekiq:

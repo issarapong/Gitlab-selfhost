@@ -33,6 +33,46 @@ letsencrypt['enable'] = true
 # letsencrypt['alt_names'] = []
 ```
 
+## Connect Mail Server 
+$ sudo vim /etc/gitlab/gitlab.rb
+
+###! Docs: https://docs.gitlab.com/omnibus/settings/smtp.html
+###! **Use smtp instead of sendmail/postfix.**
+
+ gitlab_rails['smtp_enable'] = true
+ gitlab_rails['smtp_address'] = "smtp.example.com"
+ gitlab_rails['smtp_port'] = 587
+ gitlab_rails['smtp_user_name'] = "gitlab@example.com"
+ gitlab_rails['smtp_password'] = "xxxx"
+ gitlab_rails['smtp_domain'] = "example.com"
+ gitlab_rails['smtp_authentication'] = "login"
+ gitlab_rails['smtp_enable_starttls_auto'] = true
+ #gitlab_rails['smtp_tls'] = false
+# gitlab_rails['smtp_pool'] = false
+
+###! **Can be: 'none', 'peer', 'client_once', 'fail_if_no_peer_cert'**
+###! Docs: http://api.rubyonrails.org/classes/ActionMailer/Base.html
+ gitlab_rails['smtp_openssl_verify_mode'] = 'peer'
+
+# gitlab_rails['smtp_ca_path'] = "/etc/ssl/certs"
+# gitlab_rails['smtp_ca_file'] = "/etc/ssl/certs/ca-certificates.crt"
+
+### Email Settings
+
+# gitlab_rails['gitlab_email_enabled'] = true
+
+##! If your SMTP server does not like the default 'From: gitlab@gitlab.example.com'
+##! can change the 'From' with this setting.
+ gitlab_rails['gitlab_email_from'] = 'gitlab@exampl.com'
+# gitlab_rails['gitlab_email_display_name'] = 'Example'
+# gitlab_rails['gitlab_email_reply_to'] = 'noreply@example.com'
+# gitlab_rails['gitlab_email_subject_suffix'] = ''
+# gitlab_rails['gitlab_email_smime_enabled'] = false
+# gitlab_rails['gitlab_email_smime_key_file'] = '/etc/gitlab/ssl/gitlab_smime.key'
+# gitlab_rails['gitlab_email_smime_cert_file'] = '/etc/gitlab/ssl/gitlab_smime.crt'
+# gitlab_rails['gitlab_email_smime_ca_certs_file'] = '/etc/gitlab/ssl/gitlab_smime_cas.crt
+
+
 
 ## About Service in gitlab  
 ```bash

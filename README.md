@@ -73,6 +73,12 @@ $ sudo vim /etc/gitlab/gitlab.rb
 # gitlab_rails['gitlab_email_smime_cert_file'] = '/etc/gitlab/ssl/gitlab_smime.crt'
 # gitlab_rails['gitlab_email_smime_ca_certs_file'] = '/etc/gitlab/ssl/gitlab_smime_cas.crt
 ```
+## Debug
+```
+$gitlab-rails console
+Notify.test_email('issarapong@example.com', 'Message Subject', 'Message Body').deliver_now
+
+```
 * Docnt forget add MX& TXT reccord of mail server to dns zone
 
 

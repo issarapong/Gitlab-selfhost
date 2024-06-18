@@ -1,3 +1,5 @@
+## gitlab-ci.yaml
+```
 stages:
   - build
   - test
@@ -21,3 +23,4 @@ deploy:
     - echo 'Deploying the application...'
   tags:
     - deploy-server r # Runnner In Deploy-Server will work
+```
